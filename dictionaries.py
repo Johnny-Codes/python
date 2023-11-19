@@ -4,6 +4,19 @@
 # changeable and indexed. In Python dictionaries are written with curly
 # brackets, and they have keys and values.
 
+# Method	Description
+# clear()	Removes all the elements from the dictionary
+# copy()	Returns a copy of the dictionary
+# fromkeys()	Returns a dictionary with the specified keys and value
+# get()	Returns the value of the specified key
+# items()	Returns a list containing a tuple for each key value pair
+# keys()	Returns a list containing the dictionary's keys
+# pop()	Removes the element with the specified key
+# popitem()	Removes the last inserted key-value pair
+# setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+# update()	Updates the dictionary with the specified key-value pairs
+# values()	Returns a list of all the values in the dictionary
+
 # Create and print an empty dictionary:
 empty_dict = {}
 print(empty_dict)
@@ -34,26 +47,15 @@ print(y)
 z = new_dict.get("age", 0)
 print(z)
 
+l = new_dict.get("last name", "N/A")
+print(l)
+
 # Change Values:
 new_dict["age"] = 21
 print(new_dict)
 
 new_dict.update({"age": 36})
 print(new_dict)
-
-# Loop Through a Dictionary:
-for key in new_dict:
-    print(key)
-
-for value in new_dict.values():
-    print(value)
-
-for key, value in new_dict.items():
-    print(key, value)
-
-# Check if Key Exists:
-if "age" in new_dict:
-    print("Yes, 'age' is one of the keys in the new_dict dictionary")
 
 # Adding Items:
 new_dict["city"] = "Houston"
@@ -100,6 +102,9 @@ nested_dict = {
 }
 print(nested_dict)
 
+# Accessing Nested Dictionaries:
+print(nested_dict["child 1"]["name"])
+
 # Create a Dictionary that Contains List Values:
 new_dict3 = {
     "parent": "Johnny",
@@ -108,6 +113,9 @@ new_dict3 = {
     "children": ["Jake", "Jason", "Janet"]
 }
 print(new_dict3)
+
+n = new_dict3.fromkeys(new_dict3)
+print(n)
 
 # Create a Dictionary that Contains Dictionary Values:
 new_dict4 = {
@@ -122,18 +130,39 @@ print(new_dict4["children"]["child 1"]["name"])
 # Advanced Dictionary Methods:
 # Python has a set of built-in methods that you can use on dictionaries.
 
-# Method	Description
-# clear()	Removes all the elements from the dictionary
-# copy()	Returns a copy of the dictionary
-# fromkeys()	Returns a dictionary with the specified keys and value
-# get()	Returns the value of the specified key
-# items()	Returns a list containing a tuple for each key value pair
-# keys()	Returns a list containing the dictionary's keys
-# pop()	Removes the element with the specified key
-# popitem()	Removes the last inserted key-value pair
-# setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
-# update()	Updates the dictionary with the specified key-value pairs
-# values()	Returns a list of all the values in the dictionary
+# using fromkeys()
+
+list_of_keys = ["name", "age", "state"]
+new_dict5 = dict.fromkeys(list_of_keys)
+print(new_dict5)
+
+new_dict = {
+    "name": "Johnny",
+    "age": 36,
+    "state": "TX"
+}
+
+age = new_dict.setdefault('age', 30)
+print(f"age: {age}")
+
+gender = new_dict.setdefault('gender', 'male')
+print(f"gender: {gender}")
+
+print(new_dict)
+
+# Loop Through a Dictionary:
+for key in new_dict:
+    print(key)
+
+for value in new_dict.values():
+    print(value)
+
+for key, value in new_dict.items():
+    print(key, value)
+
+# Check if Key Exists:
+if "age" in new_dict:
+    print("Yes, 'age' is one of the keys in the new_dict dictionary")
 
 employees = [
     ("John", "Male"),
