@@ -3,14 +3,14 @@
 ## Roadmap
 
 - [ ] Numbers
-  _ [ ] Booleans
-  _ [ ] Integers
+  - [ ] Booleans
+  - [ ] Integers
 - [ ] Sequences
-  _ [ ] Lists
-  _ [ ] Strings
-  _ [ ] Tuples
+  - [ ] Lists
+  - [ ] Strings
+  - [ ] Tuples
 - [ ]  Mappings
-  _ [x] Dictionaries
+  - [x] Dictionaries
 - [ ] Sets
 - [ ] Files 
 
