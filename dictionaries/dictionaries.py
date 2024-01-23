@@ -39,7 +39,7 @@ print("empty_dict:", empty_dict)
 # Clear a dictionary
 
 empty_dict.clear()
-print("cleared empty_dict:", empty_dict
+print("cleared empty_dict:", empty_dict)
 
 # Delete a dictionary entirely
 
@@ -47,11 +47,7 @@ del empty_dict
 print("deleted empty_dict returns error", empty_dict)
 
 # Create a dictionary with initial values:
-new_dict = {
-    "name": "Johnny",
-    "age": 30,
-    "state": "TX"
-}
+new_dict = {"name": "Johnny", "age": 30, "state": "TX"}
 
 # Accessing Items:
 
@@ -115,18 +111,9 @@ print(new_dict2)
 # Nested Dictionaries:
 
 users = {
-    1: {
-        "name": "Jake",
-        "birth_year": 2004
-    },
-    2: {
-        "name": "Jason",
-        "birth_year": 2007
-    },
-    3: {
-        "name": "Janet",
-        "birth_year": 2011
-    }
+    1: {"name": "Jake", "birth_year": 2004},
+    2: {"name": "Jason", "birth_year": 2007},
+    3: {"name": "Janet", "birth_year": 2011},
 }
 print(users)
 
@@ -140,7 +127,7 @@ new_dict = {
     "parent": "Johnny",
     "age": 36,
     "state": "TX",
-    "children": ["Jake", "Jason", "Janet"]
+    "children": ["Jake", "Jason", "Janet"],
 }
 print("new_dict:", new_dict)
 
@@ -164,16 +151,12 @@ list_of_keys = ["name", "age", "state"]
 new_dict = dict.fromkeys(list_of_keys)
 print("new_dict fromkeys():", new_dict)
 
-new_dict = {
-    "name": "Johnny",
-    "age": 36,
-    "state": "TX"
-}
+new_dict = {"name": "Johnny", "age": 36, "state": "TX"}
 
-new_dict.setdefault('age', 30)
+new_dict.setdefault("age", 30)
 print("age added:", new_dict)
 
-new_dict.setdefault('gender', 'male')
+new_dict.setdefault("gender", "male")
 print("gender added:", new_dict)
 
 print(new_dict)
@@ -196,12 +179,7 @@ if "age" in new_dict:
 
 # Create a dictionary from a list of tuples
 
-employees = [
-    ("John", "Male"),
-    ("Jane", "Female"),
-    ("Joe", "Male"),
-    ("Jill", "Female")
-]
+employees = [("John", "Male"), ("Jane", "Female"), ("Joe", "Male"), ("Jill", "Female")]
 
 employees_dict = dict(employees)
 print("employee_dict:", employees_dict)
